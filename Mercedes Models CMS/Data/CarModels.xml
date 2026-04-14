@@ -8,4 +8,12 @@
     <HorsePower>250</HorsePower>
     <IsSelected>false</IsSelected>
   </CarModel>
+  <CarModel>
+    <Name>S Class</Name>
+    <ImagePath>../../../Images\S Class-20260414191118110.jpeg</ImagePath>
+    <RtfFilePath>../../../Data/RTFs\S Class.rtf</RtfFilePath>
+    <DateAdded>2026-04-14T19:11:18.1229846+02:00</DateAdded>
+    <HorsePower>550</HorsePower>
+    <IsSelected>false</IsSelected>
+  </CarModel>
 </ArrayOfCarModel>
