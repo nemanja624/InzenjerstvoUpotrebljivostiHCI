@@ -1,0 +1,67 @@
+﻿<Window x:Class="Mercedes_Models_CMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mercedes_Models_CMS" 
+        xmlns:fa5="http://schemas.fontawesome.com/icons/"
+        xmlns:svg="http://sharpvectors.codeplex.com/svgc/" xmlns:notifications="clr-namespace:Notification.Wpf.Controls;assembly=Notification.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="700"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseDown"
+        Background="Transparent">
+    <Window.Resources>
+        <SolidColorBrush x:Key="AccentGoldBrush" Color="#1E88E5"/>
+        <SolidColorBrush x:Key="BrightGoldBrush" Color="#64B5F6"/>
+    </Window.Resources>
+    <Border CornerRadius="25"
+            Background="{StaticResource PrimaryBlackBrush}"
+            BorderBrush="{StaticResource AccentGoldBrush}"
+            BorderThickness="2"
+            >    
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+            <notifications:NotificationArea
+                        x:Name="WindowNotificationArea"
+                        Panel.ZIndex="1000"
+                        MaxItems="3"
+                        Position="TopRight"
+                Grid.Row="0" Grid.ColumnSpan="3"/>
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
+
+                <svg:SvgViewbox Source="/Images/mercedes-official.svg" Width="200" Height="200"/>
+            <TextBlock HorizontalAlignment="Center" Style="{StaticResource TitleText}" Text="MERCEDES"/>
+            <TextBlock HorizontalAlignment="Center" Style="{StaticResource TitleText}" FontSize="15" Text="Content Management System"/>
+        </StackPanel>
+            
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 10 0 0">
+                <StackPanel Orientation="Vertical" >
+                    <Label Content="Username:" Foreground="{StaticResource AccentGoldBrush}"></Label>
+                    <TextBox KeyDown="EnterKey"  x:Name="UserNameTextBox" Margin="5 0 0 0" Height="20" Style="{StaticResource InputTextBox}" GotFocus="UserName_GotFocus" LostFocus="UserName_LostFocus"></TextBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Password:" Foreground="{StaticResource AccentGoldBrush}"></Label>
+                    <PasswordBox KeyDown="EnterKey" x:Name="PasswordTextBox" Margin="5 0 0 0" Height="20" Style="{StaticResource PasswordBox}"></PasswordBox>
+                    <Label x:Name="ErrorPassword_Label" Content="" FontSize="14" Foreground="Red"/>
+                </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="0 25 0 0" Grid.Row="2" Grid.Column="1">
+            <Button Content="LOGIN" Click="Login_Button_Click"/>
+            <Button Content="EXIT" Click="ExitButton_Click"/>
+        </StackPanel>
+    </Grid>
+    </Border>
+
+</Window>

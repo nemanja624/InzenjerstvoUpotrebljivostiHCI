@@ -1,0 +1,73 @@
+﻿<Window x:Class="Mercedes_Models_CMS.Pages.PreviewCarModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mercedes_Models_CMS.Pages"
+        xmlns:svg="http://sharpvectors.codeplex.com/svgc/"
+        xmlns:fa5="http://schemas.fontawesome.com/icons/"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+
+
+        mc:Ignorable="d"
+        Title="PreviewCarModel" Height="750" Width="700"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterOwner"
+        MouseLeftButtonDown="Window_MouseDown"
+        Background="Transparent">
+    <Border CornerRadius="25"
+        Background="{StaticResource PrimaryBlackBrush}"
+        BorderBrush="{StaticResource AccentGoldBrush}"
+        BorderThickness="2">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                <svg:SvgViewbox Source="/Images/mercedes-3.svg" Height="60" Width="150" VerticalAlignment="Top"/>
+                <TextBlock Text=" PREVIEW CAR MODEL" Style="{StaticResource TitleText}" 
+           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Margin="5">
+                <Label FontSize="16" FontWeight="Bold"  Foreground="{StaticResource AccentGoldBrush}" Content="Model name:"/>
+                <TextBlock FontSize="16" x:Name="ModelName_TextBlock" Margin="5 0 0 0" Style="{StaticResource NormalText}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Margin="5" Grid.Column="1">
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center"  Foreground="{StaticResource AccentGoldBrush}" Content="Horse power:"/>
+                    <fa5:FontAwesome Icon="Solid_Horse" 
+                                     Foreground="{StaticResource AccentGoldBrush}" 
+                                     VerticalAlignment="Center"
+                                     />
+                </StackPanel>
+                <TextBlock FontSize="16" Margin="5  0 0 0" x:Name="HorsePower_TextBlock" Style="{StaticResource NormalText}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Margin="5 10 5 5" Grid.Column="0">
+                    <Image x:Name="ModelImage" Width="650" Height="300"/>
+            </StackPanel>
+            <DockPanel
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Margin="5,5,5,5">
+                <FlowDocumentScrollViewer
+                        x:Name="DescriptionViewer"
+                        FontFamily="Courier New"
+                        VerticalScrollBarVisibility="Auto"
+                        IsToolBarVisible="False"/>
+            </DockPanel>
+            <StackPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom">
+                <Button x:Name="Exit_Button" Content="EXIT" Click="Exit_Button_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

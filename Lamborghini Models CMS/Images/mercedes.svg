@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#1b2128"/>
+      <stop offset="65%" stop-color="#0f141a"/>
+      <stop offset="100%" stop-color="#06090d"/>
+    </radialGradient>
+
+    <linearGradient id="ringOuter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="35%" stop-color="#aab3bc"/>
+      <stop offset="60%" stop-color="#e9edf2"/>
+      <stop offset="100%" stop-color="#6f7983"/>
+    </linearGradient>
+
+    <linearGradient id="ringInner" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d9dee4"/>
+      <stop offset="50%" stop-color="#87919b"/>
+      <stop offset="100%" stop-color="#eef2f6"/>
+    </linearGradient>
+
+    <linearGradient id="bladeLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f9fb"/>
+      <stop offset="45%" stop-color="#cfd6de"/>
+      <stop offset="100%" stop-color="#8e98a3"/>
+    </linearGradient>
+
+    <linearGradient id="bladeDark" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f3943"/>
+      <stop offset="50%" stop-color="#121920"/>
+      <stop offset="100%" stop-color="#59636d"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="256" cy="256" r="250" fill="url(#bg)"/>
+
+  <circle cx="256" cy="256" r="220" fill="none" stroke="url(#ringOuter)" stroke-width="24"/>
+  <circle cx="256" cy="256" r="196" fill="none" stroke="url(#ringInner)" stroke-width="7"/>
+
+  <polygon points="256,256 242,78 256,60 270,78" fill="url(#bladeLight)"/>
+  <polygon points="256,256 352,378 386,394 374,362" fill="url(#bladeLight)"/>
+  <polygon points="256,256 160,378 126,394 138,362" fill="url(#bladeLight)"/>
+
+  <polygon points="256,256 270,78 300,92 278,256" fill="url(#bladeDark)"/>
+  <polygon points="256,256 352,378 332,402 254,274" fill="url(#bladeDark)"/>
+  <polygon points="256,256 160,378 180,402 258,274" fill="url(#bladeDark)"/>
+
+  <circle cx="256" cy="256" r="9" fill="#eef2f6"/>
+</svg>

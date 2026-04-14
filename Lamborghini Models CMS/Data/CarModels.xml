@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCarModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CarModel>
+    <Name>G Class</Name>
+    <ImagePath>../../../Images\G Class-20260414183349441.jpeg</ImagePath>
+    <RtfFilePath>../../../Data/RTFs\G Class.rtf</RtfFilePath>
+    <DateAdded>2026-04-14T18:33:49.4603987+02:00</DateAdded>
+    <HorsePower>250</HorsePower>
+    <IsSelected>false</IsSelected>
+  </CarModel>
+</ArrayOfCarModel>
